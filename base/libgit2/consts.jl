@@ -342,6 +342,7 @@ These are used to select which global option to set or get and are used in `git_
                     GET_CACHED_MEMORY        = 9,
                     GET_TEMPLATE_PATH        = 10,
                     SET_TEMPLATE_PATH        = 11,
-                    SET_SSL_CERT_LOCATIONS   = 12)
+                    SET_SSL_CERT_LOCATIONS   = 12,
+                    SET_USER_AGENT           = 13)
 
 end

@@ -513,6 +513,12 @@ function set_ssl_cert_locations(cert_loc)
           Cint(Consts.SET_SSL_CERT_LOCATIONS), cert_file, cert_dir)
 end
 
+function set_user_agent(user_agent)
+    ccall((:git_libgit2_opts, :libgit2), Cint,
+          (Cint, Cstring),
+          Cint(Consts.SET_USER_AGENT), user_agent)
+end
+
 function __init__()
     err = ccall((:git_libgit2_init, :libgit2), Cint, ())
     err > 0 || throw(ErrorException("error initializing LibGit2 module"))
