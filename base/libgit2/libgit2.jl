@@ -536,6 +536,8 @@ function __init__()
         abspath(ccall(:jl_get_julia_home, Any, ()),Base.DATAROOTDIR,"julia","cert.pem")
     end
     set_ssl_cert_locations(cert_loc)
+
+    set_user_agent("Julia $(VERSION)")
 end
 
 
